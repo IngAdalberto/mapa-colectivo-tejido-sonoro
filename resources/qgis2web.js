@@ -11,6 +11,13 @@ var map = new ol.Map({
     })
 });
 
+map.getInteractions().forEach(function (interaction) {
+    if (interaction instanceof ol.interaction.MouseWheelZoom) {
+        interaction.setActive(false);
+    }
+});
+
+
 //initial view - epsg:3857 coordinates if not "Match project CRS"
 map.getView().fit([4822415.311748, 2536602.155287, 5118272.647032, 2696143.914594], map.getSize());
 
