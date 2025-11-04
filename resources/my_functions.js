@@ -248,28 +248,30 @@
   }
 
   // navigation
-  btnPrevFeature.addEventListener("click", function () {
-    if (currentFeatureIndex > 0)
-      openModalWithFeatureByIndex(currentFeatureIndex - 1);
-  });
-  btnNextFeature.addEventListener("click", function () {
-    if (currentFeatureIndex < featureIndex.length - 1)
-      openModalWithFeatureByIndex(currentFeatureIndex + 1);
-  });
+  window.onload = function() {
+    btnPrevFeature.addEventListener("click", function () {
+      if (currentFeatureIndex > 0)
+        openModalWithFeatureByIndex(currentFeatureIndex - 1);
+    });
+    btnNextFeature.addEventListener("click", function () {
+      if (currentFeatureIndex < featureIndex.length - 1)
+        openModalWithFeatureByIndex(currentFeatureIndex + 1);
+    });
 
-  // gallery nav
-  galleryPrev.addEventListener("click", function () {
-    if (currentImageList.length <= 1) return;
-    currentImageIndex =
-      (currentImageIndex - 1 + currentImageList.length) %
-      currentImageList.length;
-    modalImage.src = currentImageList[currentImageIndex];
-  });
-  galleryNext.addEventListener("click", function () {
-    if (currentImageList.length <= 1) return;
-    currentImageIndex = (currentImageIndex + 1) % currentImageList.length;
-    modalImage.src = currentImageList[currentImageIndex];
-  });
+    // gallery nav
+    galleryPrev.addEventListener("click", function () {
+      if (currentImageList.length <= 1) return;
+      currentImageIndex =
+        (currentImageIndex - 1 + currentImageList.length) %
+        currentImageList.length;
+      modalImage.src = currentImageList[currentImageIndex];
+    });
+    galleryNext.addEventListener("click", function () {
+      if (currentImageList.length <= 1) return;
+      currentImageIndex = (currentImageIndex + 1) % currentImageList.length;
+      modalImage.src = currentImageList[currentImageIndex];
+    });
+}
 
   // zoom to feature
   /*
