@@ -298,12 +298,18 @@
     });
 
     // tabs
-    document.getElementById("tabsNav").addEventListener("click", function (ev) {
+    
+  const divTabsNav = document.getElementById("tabsNav");
+  
+  if (divTabsNav) {
+    divTabsNav.addEventListener("click", function (ev) {
       const btn = ev.target.closest("button");
       if (!btn) return;
       const tab = btn.getAttribute("data-tab");
       setActiveTab(tab);
     });
+  }
+    
 });
 
   // zoom to feature
