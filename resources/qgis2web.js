@@ -11,38 +11,6 @@ var map = new ol.Map({
     })
 });
 
-/*
-map.on('singleclick', function(evt) {
-    var found = false;
-    map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
-        if (found) return true;
-
-        // Ignorar capas no vectoriales
-        if (!layer || !layer.getSource || !layer.getSource().getFeatures) {
-            return false;
-        }
-
-        var features = layer.getSource().getFeatures();
-        var idx = features.indexOf(feature);
-        if (idx === -1) return false;
-
-        // Llamar a la función expuesta (si existe)
-        if (typeof window.openModalWithFeatureByIndex === 'function') {
-            window.openModalWithFeatureByIndex(idx);
-        } else if (typeof window._openModalWithIndex === 'function') {
-            window._openModalWithIndex(idx);
-        } else {
-            console.warn('Función modal no disponible aún. Índice:', idx);
-        }
-
-        found = true;
-        return true;
-    });
-
-    try { if (typeof popup !== 'undefined' && popup && typeof popup.setPosition === 'function') popup.setPosition(undefined); } catch(e){}
-});
-*/
-
 //initial view - epsg:3857 coordinates if not "Match project CRS"
 map.getView().fit([4822415.311748, 2536602.155287, 5118272.647032, 2696143.914594], map.getSize());
 
@@ -97,9 +65,6 @@ map.getView().setProperties({constrainResolution: true});
 
 //popup
 var sketch;
-var container = document.getElementById('contentAux');
-var content = document.getElementById('contentAux');
-var closer = document.getElementById('contentAux');
 /*
 var container = document.getElementById('popup');
 var content = document.getElementById('popup-content');
@@ -112,8 +77,6 @@ function stopMediaInPopup() {
         media.currentTime = 0;
     });
 }
-
-*/
 closer.onclick = function() {
     container.style.display = 'none';
     closer.blur();
@@ -125,6 +88,8 @@ var overlayPopup = new ol.Overlay({
 	autoPan: true
 });
 map.addOverlay(overlayPopup)
+
+*/
     
     
 var NO_POPUP = 0
@@ -339,7 +304,7 @@ function onPointerMove(evt) {
             highlight = currentFeature;
         }
     }
-
+/*
     if (doHover) {
         if (popupText) {
 			content.innerHTML = '';//popupText;
@@ -349,7 +314,7 @@ function onPointerMove(evt) {
             container.style.display = 'none';
             closer.blur();
         }
-    }
+    }*/
 };
 
 map.on('pointermove', onPointerMove);
@@ -358,6 +323,7 @@ var popupContent = '';
 var popupCoord = null;
 var featuresPopupActive = false;
 
+/*
 function updatePopup() {
     if (popupContent) {
         content.innerHTML = '';//popupContent;
@@ -368,7 +334,7 @@ function updatePopup() {
         closer.blur();
         stopMediaInPopup();
     }
-} 
+} */
 
 function onSingleClickFeatures(evt) {
     if (doHover || sketch) {
@@ -424,7 +390,7 @@ function onSingleClickFeatures(evt) {
 	
 	popupContent = popupText;
     popupCoord = coord;
-    updatePopup();
+    //updatePopup();
 }
 
 function onSingleClickWMS(evt) {
