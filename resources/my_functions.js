@@ -248,7 +248,7 @@
   }
 
   // Todos los eventos addEventListener se deben agregar despues que carga la pagina
-  window.onload = function() {
+  document.addEventListener("DOMContentLoaded", function(){
     // navigation
     btnPrevFeature.addEventListener("click", function () {
       if (currentFeatureIndex > 0)
@@ -291,7 +291,7 @@
       const tab = btn.getAttribute("data-tab");
       setActiveTab(tab);
     });
-}
+});
 
   // zoom to feature
   /*
