@@ -191,6 +191,12 @@ var highlight;
 var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
 
 function onPointerMove(evt) {
+
+    // --- Cursor hover --- //
+    var hit = map.hasFeatureAtPixel(map.getEventPixel(evt.originalEvent));
+    map.getTargetElement().style.cursor = hit ? 'pointer' : 'default';
+
+
     if (!doHover && !doHighlight) {
         return;
     }
