@@ -247,8 +247,9 @@
     );
   }
 
-  // navigation
+  // Todos los eventos addEventListener se deben agregar despues que carga la pagina
   window.onload = function() {
+    // navigation
     btnPrevFeature.addEventListener("click", function () {
       if (currentFeatureIndex > 0)
         openModalWithFeatureByIndex(currentFeatureIndex - 1);
@@ -270,6 +271,25 @@
       if (currentImageList.length <= 1) return;
       currentImageIndex = (currentImageIndex + 1) % currentImageList.length;
       modalImage.src = currentImageList[currentImageIndex];
+    });
+
+    
+    closeModalBtn.addEventListener("click", closeModal);
+    // click outside to close
+    window.addEventListener("click", function (e) {
+      if (e.target === modal) closeModal();
+    });
+    // ESC to close
+    window.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeModal();
+    });
+
+    // tabs
+    document.getElementById("tabsNav").addEventListener("click", function (ev) {
+      const btn = ev.target.closest("button");
+      if (!btn) return;
+      const tab = btn.getAttribute("data-tab");
+      setActiveTab(tab);
     });
 }
 
@@ -313,23 +333,7 @@
     modal.style.display = "none";
     modal.setAttribute("aria-hidden", "true");
   }
-  closeModalBtn.addEventListener("click", closeModal);
-  // click outside to close
-  window.addEventListener("click", function (e) {
-    if (e.target === modal) closeModal();
-  });
-  // ESC to close
-  window.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeModal();
-  });
 
-  // tabs
-  document.getElementById("tabsNav").addEventListener("click", function (ev) {
-    const btn = ev.target.closest("button");
-    if (!btn) return;
-    const tab = btn.getAttribute("data-tab");
-    setActiveTab(tab);
-  });
   function setActiveTab(tab) {
     document.querySelectorAll("#tabsNav button").forEach((b) => b.classList.remove("active"));
     const btn = document.querySelector(
