@@ -81,17 +81,16 @@
   // --- modal helpers ---
   const modal = document.getElementById("infomodal");
   const modalImage = document.getElementById("modalImage");
-  const modalGallery = document.getElementById("modalGallery");
+  //const modalGallery = document.getElementById("modalGallery");
   const galleryPrev = document.getElementById("galleryPrev");
   const galleryNext = document.getElementById("galleryNext");
   const modalTitle = document.getElementById("modalTitle");
   const tabInfo = document.getElementById("tabContentInfo");
-    var tabCom = document.getElementById('tabContentCom');
-    var tabGallery = document.getElementById('tabContentGallery');
+  
   const closeModalBtn = document.getElementById("closeModalBtn");
   const btnPrevFeature = document.getElementById("prevFeature");
   const btnNextFeature = document.getElementById("nextFeature");
-  const btnZoom = document.getElementById("zoomTo");
+  //const btnZoom = document.getElementById("zoomTo");
 
   let currentFeatureIndex = -1;
   let currentImageList = [];
@@ -250,16 +249,22 @@
   // Todos los eventos addEventListener se deben agregar despues que carga la pagina
   document.addEventListener("DOMContentLoaded", function(){
     // navigation
+    if (btnPrevFeature) {
     btnPrevFeature.addEventListener("click", function () {
       if (currentFeatureIndex > 0)
         openModalWithFeatureByIndex(currentFeatureIndex - 1);
     });
+  }
+
+  if (btnNextFeature) {
     btnNextFeature.addEventListener("click", function () {
       if (currentFeatureIndex < featureIndex.length - 1)
         openModalWithFeatureByIndex(currentFeatureIndex + 1);
     });
+  }
 
     // gallery nav
+  if (galleryPrev) {
     galleryPrev.addEventListener("click", function () {
       if (currentImageList.length <= 1) return;
       currentImageIndex =
@@ -267,14 +272,22 @@
         currentImageList.length;
       modalImage.src = currentImageList[currentImageIndex];
     });
+  }
+   
+  
+  if (galleryNext) {
     galleryNext.addEventListener("click", function () {
       if (currentImageList.length <= 1) return;
       currentImageIndex = (currentImageIndex + 1) % currentImageList.length;
       modalImage.src = currentImageList[currentImageIndex];
     });
-
-    
+  }
+   
+  
+  if (closeModalBtn) {
     closeModalBtn.addEventListener("click", closeModal);
+  }
+
     // click outside to close
     window.addEventListener("click", function (e) {
       if (e.target === modal) closeModal();
