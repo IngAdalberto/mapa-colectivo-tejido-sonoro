@@ -67,14 +67,6 @@
                 tipo: "Colectivo"
             },
             {
-                titulo: "La Contaminación En La Loma De Calenturas",
-                slogan: "La Loma al día / Activa Stereo",
-                descripcion: "Este proyecto audiovisual presenta un retrato real y contundente sobre el impacto ambiental que la actividad minera ha generado en La Loma de Calenturas.",
-                thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/La-Contaminacion-En-La-Loma-De-Calenturas.png",
-                url: "https://colectivotejidosonoro.com/la-contaminacion-en-la-loma-de-calenturas/",
-                tipo: "Colectivo"
-            },
-            {
                 titulo: "Naranjable: Dulzura que sana",
                 slogan: "EBANO EN LA RED – Karen Angulo - Silvana Osorio",
                 descripcion: "En las montañas del Cesar, donde el silencio del cierre minero dejó huellas profundas, un grupo de mujeres decidió transformar la pérdida en esperanza. Así nació Naranjable, una iniciativa que convierte las naranjas del campo jagüero en una jalea artesanal cargada de historia, sabor y resiliencia.",
@@ -98,6 +90,14 @@
                 descripcion: "Este corto audiovisual narra los orígenes de la minería del carbón en La Jagua de Ibirico, revelando cómo surgió esta actividad que transformó la economía local y nacional. A través del testimonio de sus protagonistas, se reconstruye el inicio de la pequeña minería, el papel de los primeros extractores artesanales y el nacimiento de los recordados barbacheros.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/1-proyecto-asopraps-item-menu.png",
                 url: "https://colectivotejidosonoro.com/proyecto-asopraps-ganancias-para-la-vida/",
+                tipo: "Colectivo"
+            },
+            {
+                titulo: "La Contaminación En La Loma De Calenturas",
+                slogan: "La Loma al día / Activa Stereo",
+                descripcion: "Este proyecto audiovisual presenta un retrato real y contundente sobre el impacto ambiental que la actividad minera ha generado en La Loma de Calenturas.",
+                thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/La-Contaminacion-En-La-Loma-De-Calenturas.png",
+                url: "https://colectivotejidosonoro.com/la-contaminacion-en-la-loma-de-calenturas/",
                 tipo: "Colectivo"
             },
             {
