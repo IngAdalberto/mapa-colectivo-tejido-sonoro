@@ -1,37 +1,53 @@
-<?php
-$municipios = [
+<div class="mb-3">
+  <label class="form-label">Municipio</label>
+  <select name="municipio" class="form-select" required>
+    <?php
+    $muns = [
   "AGUSTIN CODAZZI","BECERRIL","LA JAGUA DE IBIRICO","EL PASO",
   "CHIRIGUANA","CHIMICHAGUA","EL BANCO"
 ];
-?>
+    foreach($muns as $m){
+      $sel = ($item['municipio']==$m)?"selected":"";
+      echo "<option $sel>$m</option>";
+    }
+    ?>
+  </select>
+</div>
 
-<label>Municipio</label>
-<select name="municipio">
-    <?php foreach($municipios as $m): ?>
-    <option <?=$item['municipio']==$m?"selected":""?>><?=$m?></option>
-    <?php endforeach; ?>
-</select>
+<div class="mb-3">
+  <label class="form-label">Título</label>
+  <input name="titulo" value="<?= $item['titulo'] ?>" class="form-control" required>
+</div>
 
-<label>Título</label>
-<input name="titulo" value="<?=$item['titulo'] ?? ""?>">
+<div class="mb-3">
+  <label class="form-label">Slogan</label>
+  <input name="slogan" value="<?= $item['slogan'] ?>" class="form-control">
+</div>
 
-<label>Slogan</label>
-<input name="slogan" value="<?=$item['slogan'] ?? ""?>">
+<div class="mb-3">
+  <label class="form-label">Descripción</label>
+  <textarea name="descripcion" class="form-control" rows="3"><?= $item['descripcion'] ?></textarea>
+</div>
 
-<label>Descripción</label>
-<textarea name="descripcion"><?=$item['descripcion'] ?? ""?></textarea>
+<div class="mb-3">
+  <label class="form-label">Thumbnail (URL)</label>
+  <input name="thumbnail" value="<?= $item['thumbnail'] ?>" class="form-control">
+</div>
 
-<label>Thumbnail</label>
-<input name="thumbnail" value="<?=$item['thumbnail'] ?? ""?>">
+<div class="mb-3">
+  <label class="form-label">URL destino</label>
+  <input name="url" value="<?= $item['url'] ?>" class="form-control">
+</div>
 
-<label>URL</label>
-<input name="url" value="<?=$item['url'] ?? ""?>">
+<div class="mb-3">
+  <label class="form-label">Tipo</label>
+  <select name="tipo" class="form-select">
+    <option <?= $item['tipo']=="documental"?"selected":"" ?>>documental</option>
+    <option <?= $item['tipo']=="reportaje"?"selected":"" ?>>reportaje</option>
+  </select>
+</div>
 
-<label>Tipo</label>
-<select name="tipo">
-    <option <?=($item['tipo']=="documental"?"selected":"")?>>documental</option>
-    <option <?=($item['tipo']=="reportaje"?"selected":"")?>>reportaje</option>
-</select>
-
-<label>Fecha</label>
-<input type="date" name="fecha" value="<?=$item['fecha'] ?? ""?>">
+<div class="mb-3">
+  <label class="form-label">Fecha</label>
+  <input type="date" name="fecha" value="<?= $item['fecha'] ?>" class="form-control">
+</div>
