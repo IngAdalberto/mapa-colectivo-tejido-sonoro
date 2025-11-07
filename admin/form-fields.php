@@ -42,8 +42,8 @@
 <div class="mb-3">
   <label class="form-label">Tipo</label>
   <select name="tipo" class="form-select">
-    <option <?= $item['tipo']=="documental"?"selected":"" ?>>documental</option>
-    <option <?= $item['tipo']=="reportaje"?"selected":"" ?>>reportaje</option>
+    <option <?= $item['tipo']=="Colectivo"?"selected":"" ?>>Colectivo</option>
+    <option <?= $item['tipo']=="Individual"?"selected":"" ?>>Individual</option>
   </select>
 </div>
 
