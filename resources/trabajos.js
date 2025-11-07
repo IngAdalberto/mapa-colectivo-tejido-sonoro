@@ -144,7 +144,7 @@
             },
             {
                 titulo: "Chiriguaná Puerto Cultural",
-                slogan: "ENTERESE NOTICIA: LUIFER RODRIGUEZ",
+                slogan: "LUIS FERNANDEZ/Entérese, Noticias Chiriguaná",
                 descripcion: "Chiriguaná se destaca como uno de los municipios más representativos del Cesar por su gran riqueza cultural y sus variadas manifestaciones folclóricas. En cada rincón de su territorio se respira tradición, identidad y un profundo amor por las raíces que han dado forma a su historia.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/6.-ENTERESE-NOTICIAS-CHIRIGUANA-PUERTO-CULTURAL.png",
                 url: "https://colectivotejidosonoro.com/chiriguana-puerto-cultural/",
