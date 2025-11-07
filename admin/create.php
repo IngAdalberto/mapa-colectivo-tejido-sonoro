@@ -1,5 +1,16 @@
 <?php require 'db.php';
 
+$item = [
+  'municipio' => '',
+  'titulo' => '',
+  'slogan' => '',
+  'descripcion' => '',
+  'thumbnail' => '',
+  'url' => '',
+  'tipo' => '',
+  'fecha' => ''
+];
+
 if ($_POST) {
   $sql = "INSERT INTO trabajos (municipio,titulo,slogan,descripcion,thumbnail,url,tipo,fecha)
           VALUES (?,?,?,?,?,?,?,?)";

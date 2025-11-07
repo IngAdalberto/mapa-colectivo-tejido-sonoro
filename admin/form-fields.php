@@ -7,9 +7,9 @@ $municipios = [
 
 <label>Municipio</label>
 <select name="municipio">
-<?php foreach($municipios as $m): ?>
-  <option <?=$item['municipio']==$m?"selected":""?>><?=$m?></option>
-<?php endforeach; ?>
+    <?php foreach($municipios as $m): ?>
+    <option <?=$item['municipio']==$m?"selected":""?>><?=$m?></option>
+    <?php endforeach; ?>
 </select>
 
 <label>Título</label>
@@ -29,8 +29,8 @@ $municipios = [
 
 <label>Tipo</label>
 <select name="tipo">
-  <option <?=($item['tipo']=="documental"?"selected":"")?>>documental</option>
-  <option <?=($item['tipo']=="reportaje"?"selected":"")?>>reportaje</option>
+    <option <?=($item['tipo']=="documental"?"selected":"")?>>documental</option>
+    <option <?=($item['tipo']=="reportaje"?"selected":"")?>>reportaje</option>
 </select>
 
 <label>Fecha</label>
