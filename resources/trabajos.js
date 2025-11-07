@@ -31,7 +31,7 @@
                 tipo: "Individual"
             }
         ],
-        "Becerril": [
+        "BECERRIL": [
             {
                 titulo: "Reportaje - A través del Turismo de Memoria",
                 slogan: "REPORTAJE/LUIS EDUARDO BARRETO MUEGUES/Zona Minera Periódico",
@@ -57,7 +57,7 @@
                 tipo: "Individual"
             }
         ],
-        "La Jagua de Ibirico": [
+        "LA JAGUA DE IBIRICO": [
             {
                 titulo: "Descubre la Ruta Caño Blanco – Bosque Seco Tropical, El Pulmón natural de La Jagua de Ibirico",
                 slogan: "Ebano en la Red / El Kuper On Line",
@@ -91,7 +91,7 @@
                 tipo: "Individual"
             }
         ],
-        "El Paso": [
+        "EL PASO": [
             {
                 titulo: "Proyecto Asopraps",
                 slogan: "ALIANZA ARIALDO JIMENEZ/ Canal 14 – JUNIOR GUERRA/La Paz Noticias",
@@ -117,7 +117,7 @@
                 tipo: "Individual"
             }
         ],
-        "Chiriguaná": [
+        "CHIRIGUANA": [
             {
                 titulo: "Chiriguaná, Tu Próximo Destino",
                 slogan: "LOLY BUSTAMANTE / La Voz de Chiriguaná",
@@ -151,7 +151,7 @@
                 tipo: "Individual"
             }
         ],
-        "Chimichagua": [
+        "CHIMICHAGUA": [
             {
                 titulo: "La Zapatosa resiste",
                 slogan: "JHON RODRIGUEZ /Informativo Chimichagua y el Caribe",
@@ -177,7 +177,7 @@
                 tipo: "Individual"
             }
         ],
-        "El Banco": [
+        "EL BANCO": [
             {
                 titulo: "Los Sueños de Andrés Martínez",
                 slogan: "Colectivo Crea y Kure",
