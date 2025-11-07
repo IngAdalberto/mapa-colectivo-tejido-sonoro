@@ -1,0 +1,151 @@
+/* ============= LISTA EDITORIAL EL PAÍS ============= */
+
+#tabContentTrabajos {
+  font-family: "Georgia", serif;
+  font-size: 1.5em;
+}
+
+
+.playlist-container {
+  padding: 0.3rem 0;
+  width: 100%;
+  height: 68vh;
+  overflow-y: auto;
+  background: #fafafa; /* Fondo gris muy claro periódico */
+  scrollbar-width: thin;
+}
+
+.playlist-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+  background: #fafafa;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all .25s ease;
+}
+
+.playlist-item:hover {
+  background: #ffffff;
+  border-left: 4px solid #1a1a1a;
+}
+
+.playlist-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cover {
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.07);
+  flex-shrink: 0;
+}
+
+.playlist-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-info h4 {
+  font-family: "Georgia", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+  color: #1a1a1a;
+}
+
+.playlist-slogan {
+  font-family: "Georgia", serif;
+  font-size: .9rem;
+  font-style: italic;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.playlist-desc {
+  font-family: "Georgia", serif;
+  text-align: justify;
+  font-size: .85rem;
+  color: #333;
+  line-height: 1.27rem;
+}
+
+.playlist-meta {
+  font-size: .72rem;
+  color: #777;
+}
+
+.badge {
+  font-size: .65rem;
+  padding: 2px 6px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.4);
+  color: #1a1a1a;
+  text-transform: uppercase;
+  background: #eaeaea;
+  font-family: "Georgia", serif;
+  letter-spacing: .4px;
+}
+
+.badge-doc { background: #e5f3e5; }
+.badge-rep { background: #f9efe1; }
+
+.playlist-controls {
+  display: flex;
+  gap: 8px;
+  margin: 6px 0 0 0;
+}
+
+.copy-url {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: .9rem;
+  opacity: .5;
+}
+.copy-url:hover {
+  opacity: 1;
+}
+
+/* Botón editorial minimal */
+.playlist-open {
+  border: 1px solid #1a1a1a;
+  background: transparent;
+  padding: 4px 10px;
+  border-radius: 2px;
+  font-size: .75rem;
+  font-family: "Georgia", serif;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: all .2s ease;
+}
+
+.playlist-open:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* Buscador editorial */
+.trabajo-search {
+  width: 95%;
+  padding: .6rem;
+  border: 1px solid rgba(0,0,0,0.2);
+  font-family: "Georgia", serif;
+  background: #ffffff;
+  color: #222;
+  border-radius: 2px;
+  margin: 0 auto .7rem auto;
+  display: block;
+}
+
+/* ScrollReveal style */
+.playlist-item.revealed {
+  border-left-width: 0px;
+}

@@ -1,99 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="./resources/ol.css">
-        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
-        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
-        <link rel="stylesheet" href="./resources/qgis2web.css">
 
-        <link rel="stylesheet" href="./resources/my_styles.css">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="./resources/ol.css" />
+    <link rel="stylesheet" href="resources/fontawesome-all.min.css" />
+    <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./resources/ol-layerswitcher.css" />
+    <link rel="stylesheet" href="./resources/qgis2web.css" />
 
+    <link rel="stylesheet" href="./resources/my_styles.css" />
+    <link rel="stylesheet" href="./resources/my_styles_trabajos.css" />
 
-        <title>Mapa — Colectivo Tejido Sonoro</title>
-    </head>
+    <title>Mapa — Colectivo Tejido Sonoro</title>
+</head>
 
-    <body>
-        <div id="map">
-            <!-- Botones de estilos (icons FontAwesome) -->
-            <div class="map-style-buttons" id="styleButtons">
-                <button id="btn-normal" onclick="setMapStyle('normal')" title="Normal"><i class="fas fa-sun"></i></button>
-                <button id="btn-gray" onclick="setMapStyle('gray')" title="Minimal Gris"><i class="fas fa-adjust"></i></button>
-                <button id="btn-night" onclick="setMapStyle('night')" title="Nocturno"><i class="fas fa-moon"></i></button>
-            </div>
-
-            <!-- popup original (lo dejamos por compatibilidad, lo cerraremos desde JS) -->
-            <div id="popup" class="ol-popup" style="display:none;">
-                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-                <div id="popup-content"></div>
-            </div>
+<body>
+    <div id="map">
+        <!-- Botones de estilos (icons FontAwesome) -->
+        <div class="map-style-buttons" id="styleButtons">
+            <button id="btn-normal" onclick="setMapStyle('normal')" title="Normal">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button id="btn-gray" onclick="setMapStyle('gray')" title="Minimal Gris">
+                <i class="fas fa-adjust"></i>
+            </button>
+            <button id="btn-night" onclick="setMapStyle('night')" title="Nocturno">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
 
-        <!-- Modal material -->
-        <div id="infomodal" class="modal" aria-hidden="true">
-            <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="max-height: 90vh; overflow-y: auto">
-                <div class="modal-gallery" id="modalGallery">
-                    <div class="gallery-nav">
-                        <button id="galleryPrev" title="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button id="galleryNext" title="Siguiente"><i class="fas fa-chevron-right"></i></button>
+        <!-- popup original (lo dejamos por compatibilidad, lo cerraremos desde JS) -->
+        <div id="popup" class="ol-popup" style="display: none">
+            <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+            <div id="popup-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal material -->
+    <div id="infomodal" class="modal" aria-hidden="true">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+            style="max-height: 90vh; overflow-y: auto">
+            <div class="modal-body">
+                <!-- HEADER -->
+                <div class="modal-header">
+                    <div class="modal-title" id="modalTitle">Detalle</div>
+                    <div class="modal-actions">
+                        <button id="prevFeature" title="Anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="nextFeature" title="Siguiente">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button class="modal-close" id="closeModalBtn" aria-label="Cerrar">
+                            &times;
+                        </button>
                     </div>
-                    <!-- image injected here -->
-                    <img id="modalImage" src="" alt="Imagen" style="display:none;">
                 </div>
 
-                <div class="modal-body">
-                    <div class="modal-header">
-                        <div class="modal-title" id="modalTitle">Detalle</div>
-                        <div class="modal-actions">
-                            <!-- <button id="zoomTo">Zoom</button> -->
-                            <button id="prevFeature" title="Anterior"><i class="fas fa-chevron-left"></i></button>
-                            <button id="nextFeature" title="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                            <button class="modal-close" id="closeModalBtn" aria-label="Cerrar">&times;</button>
-                        </div>
+                <div class="modal-tabs">
+                    <div class="tabs-nav" id="tabsNav">
+                        <button class="active" data-tab="trabajos">Trabajos</button>
+                        <button data-tab="info">Información</button>
+                        <button data-tab="com">Comunicadores</button>
+                        <button data-tab="gallery">Galería</button>
                     </div>
 
-                    <div class="modal-tabs">
-                        <div class="tabs-nav" id="tabsNav">
-  <button class="active" data-tab="info">Información</button>
-  <button data-tab="com">Comunicadores</button>
-  <button data-tab="gallery">Galería</button>
-</div>
-<div class="tab-content" id="tabContentInfo"></div>
-<div class="tab-content" id="tabContentCom" style="display:none"></div>
-<div class="tab-content" id="tabContentGallery" style="display:none"></div>
-
+                    <div id="tabContentTrabajos" class="tab-content">
+                        <input type="text" id="trabajosSearch" placeholder="Buscar trabajos..." />
+                        <div id="trabajosList"></div>
                     </div>
+
+                    <div class="tab-content" id="tabContentInfo" style="display: none"></div>
+                    <div class="tab-content" id="tabContentCom" style="display: none"></div>
+                    <div class="tab-content" id="tabContentGallery" style="display: none"></div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="./resources/qgis2web_expressions.js"></script>
-        <script src="./resources/proj4.js"></script>
-        <script>proj4.defs('','+proj=tmerc +lat_0=4 +lon_0=-73 +k=0.9992 +x_0=5000000 +y_0=2000000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs');</script>
-        <script src="./resources/functions.js"></script>
-        <script src="./resources/ol.js"></script>
-        <script src="./resources/ol-layerswitcher.js"></script>
-        <script src="./resources/photon-geocoder-autocomplete.min.js"></script>
-        <script src="./layers/Cesar_1.js"></script>
-        <script src="./layers/Magdalena_2.js"></script>
-        <script src="./styles/Cesar_1_style.js"></script>
-        <script src="./styles/Magdalena_2_style.js"></script>
-        <script src="./layers/layers.js" type="text/javascript"></script> 
-        <script src="./resources/Autolinker.min.js"></script>
-        
-        <script src="./resources/comunicadores.js"></script>
+    <script src="./resources/qgis2web_expressions.js"></script>
+    <script src="./resources/proj4.js"></script>
+    <script>
+        proj4.defs(
+            "",
+            "+proj=tmerc +lat_0=4 +lon_0=-73 +k=0.9992 +x_0=5000000 +y_0=2000000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs"
+        );
+    </script>
+    <script src="./resources/functions.js"></script>
+    <script src="./resources/ol.js"></script>
+    <script src="./resources/ol-layerswitcher.js"></script>
+    <script src="./resources/photon-geocoder-autocomplete.min.js"></script>
+    <script src="./layers/Cesar_1.js"></script>
+    <script src="./layers/Magdalena_2.js"></script>
+    <script src="./styles/Cesar_1_style.js"></script>
+    <script src="./styles/Magdalena_2_style.js"></script>
+    <script src="./layers/layers.js" type="text/javascript"></script>
+    <script src="./resources/Autolinker.min.js"></script>
 
-        <script src="./resources/qgis2web.js"></script>
+    <!-- Data -->
+    <script src="./resources/comunicadores.js"></script>
+    <script src="./resources/trabajos.js"></script>
 
+    <!-- Render modal -->
+    <script src="./resources/qgis2web.js"></script>
 
-        <script src="./resources/my_functions.js"></script>
-        <script src="./resources/my_functions_for_modal.js"></script>
-        <script src="./resources/comunicadores-render.js"></script>
+    <script src="./resources/trabajos-render.js"></script>
+    
+    <script src="./resources/my_functions.js"></script>
+    <script src="./resources/my_functions_for_modal.js"></script>
+    <script src="./resources/comunicadores-render.js"></script>
+</body>
 
-    </body>
 </html>

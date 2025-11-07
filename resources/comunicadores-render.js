@@ -7,8 +7,6 @@ function renderComunicadoresForFeature(props) {
   var imageSeparatorPattern = /[;]+/;
   var nameField = "MPIO_CNMBR";
 
-  console.log("renderComunicadoresForFeature props:", props);
-
   try {
     tabCom.innerHTML = "";
     var muniName = "";

@@ -2,6 +2,7 @@
 html,
 body {
     background-color: #ffffff;
+    font-family: "Georgia", serif;
 }
 
 .ol-control>* {
@@ -368,3 +369,9 @@ body,
       .com-logo-wrap img{
         max-height: 200px;
       }
+
+.highlight-match {
+    background: #ffe066;
+    border-radius: 3px;
+    padding: 0 2px;
+}

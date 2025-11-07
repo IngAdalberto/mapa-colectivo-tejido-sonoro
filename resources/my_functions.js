@@ -25,6 +25,15 @@
   // store features in load order
   const featureIndex = []; // {feature: ol.Feature, layer: ol.layer.Vector}
 
+  var galleryContainer = document.getElementById("tabContentGallery");
+
+  galleryContainer.innerHTML = `
+   <img id="modalImage" />
+   <button id="galleryPrev">◀</button>
+   <button id="galleryNext">▶</button>
+   <div id="modalThumbRow"></div>
+`;
+
   // helper: test if a value looks like an image URL
   function looksLikeImageUrl(val) {
     if (!val || typeof val !== "string") return false;
@@ -64,7 +73,10 @@
             const feats = source.getFeatures();
             for (let i = 0; i < feats.length; i++) {
               // push an object linking feature and layer
-              featureIndex.push({ feature: feats[i], layer: layer });
+              featureIndex.push({
+                feature: feats[i],
+                layer: layer
+              });
             }
           }
         } catch (e) {
@@ -86,7 +98,7 @@
   const galleryNext = document.getElementById("galleryNext");
   const modalTitle = document.getElementById("modalTitle");
   const tabInfo = document.getElementById("tabContentInfo");
-  
+
   const closeModalBtn = document.getElementById("closeModalBtn");
   const btnPrevFeature = document.getElementById("prevFeature");
   const btnNextFeature = document.getElementById("nextFeature");
@@ -114,6 +126,10 @@
         popup.setPosition(undefined);
     } catch (e) {}
 
+
+    // default tab
+    setActiveTab("trabajos");
+
     const props = Object.assign({}, feature.getProperties());
     if (props.geometry) delete props.geometry;
 
@@ -137,11 +153,11 @@
     if (!title) {
       // fallback: layer name or id
       title =
-        layer && layer.get("title")
-          ? layer.get("title")
-          : feature.getId
-          ? feature.getId()
-          : "Detalle";
+        layer && layer.get("title") ?
+        layer.get("title") :
+        feature.getId ?
+        feature.getId() :
+        "Detalle";
     }
     modalTitle.textContent = title + ', ' + layer.get("title");
 
@@ -206,19 +222,24 @@
     tabInfo.innerHTML = infoHtml;
     //tabRaw.innerHTML = rawHtml;
 
+
+    // al final de showFeatureInModal, después de preparar props:
+    try {
+      renderTrabajosTab(props);
+    } catch (e) {
+      console.warn('No se pudo renderizar Trabajos:', e);
+    }
+
     // al final de showFeatureInModal, después de preparar props:
     try {
       renderComunicadoresForFeature(props);
-    } catch(e) {
+    } catch (e) {
       console.warn('No se pudo renderizar comunicadores:', e);
     }
-
 
     // show modal
     modal.style.display = "flex";
     modal.setAttribute("aria-hidden", "false");
-    // default tab
-    setActiveTab("info");
 
     // props = feature.getProperties() (ya sin geometry)
     var imgs = window.getImagesForFeature(props);
@@ -240,53 +261,60 @@
             '"': "&quot;",
             "'": "&#39;",
             "`": "&#96;",
-          }[m];
+          } [m];
         })) ||
       s
     );
   }
 
   // Todos los eventos addEventListener se deben agregar despues que carga la pagina
-  document.addEventListener("DOMContentLoaded", function(){
+  document.addEventListener("DOMContentLoaded", function () {
     // navigation
     if (btnPrevFeature) {
-    btnPrevFeature.addEventListener("click", function () {
-      if (currentFeatureIndex > 0)
-        openModalWithFeatureByIndex(currentFeatureIndex - 1);
-    });
-  }
+      btnPrevFeature.addEventListener("click", function () {
+        if (currentFeatureIndex > 0)
+          openModalWithFeatureByIndex(currentFeatureIndex - 1);
+      });
+    }
 
-  if (btnNextFeature) {
-    btnNextFeature.addEventListener("click", function () {
-      if (currentFeatureIndex < featureIndex.length - 1)
-        openModalWithFeatureByIndex(currentFeatureIndex + 1);
-    });
-  }
+    if (btnNextFeature) {
+      btnNextFeature.addEventListener("click", function () {
+        if (currentFeatureIndex < featureIndex.length - 1)
+          openModalWithFeatureByIndex(currentFeatureIndex + 1);
+      });
+    }
 
     // gallery nav
-  if (galleryPrev) {
-    galleryPrev.addEventListener("click", function () {
-      if (currentImageList.length <= 1) return;
-      currentImageIndex =
-        (currentImageIndex - 1 + currentImageList.length) %
-        currentImageList.length;
-      modalImage.src = currentImageList[currentImageIndex];
+    if (galleryPrev) {
+      galleryPrev.addEventListener("click", function () {
+        if (currentImageList.length <= 1) return;
+        currentImageIndex =
+          (currentImageIndex - 1 + currentImageList.length) %
+          currentImageList.length;
+        modalImage.src = currentImageList[currentImageIndex];
+      });
+    }
+
+
+    if (galleryNext) {
+      galleryNext.addEventListener("click", function () {
+        if (currentImageList.length <= 1) return;
+        currentImageIndex = (currentImageIndex + 1) % currentImageList.length;
+        modalImage.src = currentImageList[currentImageIndex];
+      });
+    }
+
+    document.querySelectorAll("#modalTabs button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        activateTab(btn.dataset.tab.charAt(0).toUpperCase() + btn.dataset.tab.slice(1));
+      });
     });
-  }
-   
-  
-  if (galleryNext) {
-    galleryNext.addEventListener("click", function () {
-      if (currentImageList.length <= 1) return;
-      currentImageIndex = (currentImageIndex + 1) % currentImageList.length;
-      modalImage.src = currentImageList[currentImageIndex];
-    });
-  }
-   
-  
-  if (closeModalBtn) {
-    closeModalBtn.addEventListener("click", closeModal);
-  }
+
+
+
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener("click", closeModal);
+    }
 
     // click outside to close
     window.addEventListener("click", function (e) {
@@ -298,54 +326,19 @@
     });
 
     // tabs
-    
-  const divTabsNav = document.getElementById("tabsNav");
-  
-  if (divTabsNav) {
-    divTabsNav.addEventListener("click", function (ev) {
-      const btn = ev.target.closest("button");
-      if (!btn) return;
-      const tab = btn.getAttribute("data-tab");
-      setActiveTab(tab);
-    });
-  }
-    
-});
 
-  // zoom to feature
-  /*
-  btnZoom.addEventListener("click", function () {
-    if (currentFeatureIndex < 0 || currentFeatureIndex >= featureIndex.length)
-      return;
-    const obj = featureIndex[currentFeatureIndex];
-    const feat = obj.feature;
-    const geom = feat.getGeometry();
-    if (!geom) return;
-    // for points: center + zoom; for others: fit extent
-    try {
-      if (geom.getType && geom.getType() === "Point") {
-        const coord = geom.getCoordinates();
-        map
-          .getView()
-          .animate({
-            center: coord,
-            duration: 400,
-            zoom: Math.max(map.getView().getZoom() || 12, 16),
-          });
-      } else {
-        map
-          .getView()
-          .fit(geom.getExtent(), {
-            duration: 400,
-            padding: [80, 80, 80, 80],
-            maxZoom: 16,
-          });
-      }
-    } catch (e) {
-      console.warn("Zoom to feature failed:", e);
+    const divTabsNav = document.getElementById("tabsNav");
+
+    if (divTabsNav) {
+      divTabsNav.addEventListener("click", function (ev) {
+        const btn = ev.target.closest("button");
+        if (!btn) return;
+        const tab = btn.getAttribute("data-tab");
+        setActiveTab(tab);
+      });
     }
+
   });
-  */
 
   // close modal
   function closeModal() {
@@ -361,7 +354,7 @@
     if (btn) btn.classList.add("active");
     document.getElementById("tabContentInfo").style.display = tab === "info" ? "block" : "none";
     document.getElementById("tabContentCom").style.display = tab === "com" ? "block" : "none";
-    //document.getElementById("tabContentRaw").style.display = tab === "raw" ? "block" : "none";
+    document.getElementById("tabContentTrabajos").style.display = tab === "trabajos" ? "block" : "none";document.getElementById("tabContentGallery").style.display = tab === "gallery" ? "block" : "none";
   }
 
   // intercept map clicks: open modal instead of popup
@@ -402,7 +395,10 @@
           }
           if (idx === -1) {
             // if still not found, add it to index end and use that
-            featureIndex.push({ feature: feature, layer: layer });
+            featureIndex.push({
+              feature: feature,
+              layer: layer
+            });
             idx = featureIndex.length - 1;
           }
           openModalWithFeatureByIndex(idx);
@@ -427,6 +423,7 @@
   // --- styles toggle logic (buttons) ---
   const styleSelector =
     "#map .ol-viewport canvas, #map .ol-viewport img, #map .ol-layer canvas, #map .ol-layer img";
+
   function setMapStyleNow(style) {
     const els = document.querySelectorAll(styleSelector);
     if (!els) return;
@@ -461,6 +458,14 @@
     if (b) b.classList.add("active");
   }
 
+  function activateTab(tabName) {
+    document.querySelectorAll(".tab-content").forEach(e => {
+      e.classList.remove("active");
+    });
+    document.getElementById("tabContent" + tabName).classList.add("active");
+  }
+
+
   // default style: night
   setMapStyleNow("night");
 
@@ -474,7 +479,10 @@
   });
   // observe map container for added nodes
   const mapNode = document.getElementById("map");
-  if (mapNode) observer.observe(mapNode, { childList: true, subtree: true });
+  if (mapNode) observer.observe(mapNode, {
+    childList: true,
+    subtree: true
+  });
 
   // expose functions for debugging if needed
   window._featureIndex = featureIndex;
