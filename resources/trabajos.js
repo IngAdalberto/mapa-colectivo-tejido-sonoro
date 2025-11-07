@@ -170,7 +170,7 @@
             },
             {
                 titulo: "La Ciénaga es Vida",
-                slogan: "INFORMATIVO CHIMICHAGUA Y EL CARIBE / JHON RODRIGUEZ",
+                slogan: "JHON RODRIGUEZ /Informativo Chimichagua y el Caribe",
                 descripcion: "En el corazón del municipio de Chimichagua-Cesar, la ciénaga de Zapatosa se presenta como un territorio donde la naturaleza y la cultura se entrelazan de manera inseparable. Sus amaneceres reflejan no solo la belleza del paisaje, sino también la vitalidad de una comunidad que ha aprendido a vivir en armonía con el agua.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/La-Cienaga-es-Vida.png",
                 url: "https://colectivotejidosonoro.com/la-cienaga-es-vida/",
