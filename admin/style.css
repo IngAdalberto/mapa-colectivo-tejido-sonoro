@@ -1,0 +1,78 @@
+body {
+  font-family: "Georgia", serif;
+  background: #fafafa;
+  margin: 30px auto;
+  max-width: 960px;
+  line-height: 1.5;
+  color: #222;
+}
+
+.table-news {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table-news th {
+  text-transform: uppercase;
+  font-size: .75rem;
+  letter-spacing: .03em;
+  color: #555;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: .4rem;
+}
+
+.table-news td {
+  padding: .6rem 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.table-news a {
+  color: #444;
+  font-size: .85rem;
+}
+
+.editorial-form label {
+  font-size: .85rem;
+  font-weight: bold;
+  margin-top: .8rem;
+  display: block;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.editorial-form input,
+.editorial-form textarea,
+.editorial-form select {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-family: inherit;
+  background: white;
+}
+
+.btn-primary {
+  background: #111;
+  color: white;
+  padding: .6rem 1rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-family: inherit;
+  letter-spacing: 0.04em;
+}
+
+.btn-primary:hover {
+  background: #333;
+}
+
+.search-box input {
+  width: 260px;
+  padding: .4rem .5rem;
+  border: 1px solid #ddd;
+}
+
+.danger {
+  color: #a00 !important;
+}
