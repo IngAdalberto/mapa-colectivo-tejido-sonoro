@@ -87,7 +87,7 @@
             {
                 titulo: "Proyecto Asopraps",
                 slogan: "ALIANZA ARIALDO JIMENEZ/ Canal 14 – JUNIOR GUERRA/La Paz Noticias",
-                descripcion: "Este corto audiovisual narra los orígenes de la minería del carbón en La Jagua de Ibirico, revelando cómo surgió esta actividad que transformó la economía local y nacional. A través del testimonio de sus protagonistas, se reconstruye el inicio de la pequeña minería, el papel de los primeros extractores artesanales y el nacimiento de los recordados barbacheros.",
+                descripcion: "La Asociación Agropecuaria Asopraps, ubicada en el corregimiento de La Loma, municipio de El Paso, Cesar, se ha consolidado como un ejemplo de organización comunitaria comprometida con el desarrollo sostenible.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/1-proyecto-asopraps-item-menu.png",
                 url: "https://colectivotejidosonoro.com/proyecto-asopraps-ganancias-para-la-vida/",
                 tipo: "Colectivo"
