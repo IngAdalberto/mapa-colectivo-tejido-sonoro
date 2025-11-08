@@ -52,8 +52,8 @@
                 titulo: "Reportaje - RÍO MARACAS: agua, memoria y esperanza en Becerril (Cesar)",
                 slogan: "FRANKLIN CUENTA/LA BOLA.",
                 descripcion: "A orillas del sinuoso río Maracas, en el corazón del municipio de Becerril (Cesar), se teje una historia de identidad, transformación y lucha. No solo es fuente de agua: el río ha sido testigo de leyendas que avivan la imaginación, de jornadas duras de trabajo y de amenazas persistentes; pero hoy, con la mirada puesta en un malecón que empieza a dibujar su renacer, reaparece como símbolo vivo de un pueblo que quiere volver a abrazarlo.",
-                thumbnail: "",
-                url: "",
+                thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/Reportje-RIO-MARACAS-5-scaled.jpg",
+                url: "https://colectivotejidosonoro.com/rio-maracas-agua-memoria-y-esperanza-en-becerril-cesar/",
                 tipo: "Individual"
             },
             {
@@ -63,7 +63,15 @@
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/5-La-herencia-cultural-de-Rafael-Orozco-item-menu.png",
                 url: "https://colectivotejidosonoro.com/el-eco-de-una-voz-la-herencia-cultural-de-rafael-orozco/",
                 tipo: "Individual"
-            }
+            },
+            {
+                titulo: "Estados Unidos de Becerril, Un Destino de Paz",
+                slogan: "JUNIOR GUERRA/La Paz Noticias",
+                descripcion: "El Corregimiento de Estados Unidos en Becerril, Cesar, se ha convertido en un territorio de paz que surge de la mano de la corporación Visa Usa.",
+                thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/Reportje-RIO-MARACAS-2-scaled.jpg",
+                url: "https://colectivotejidosonoro.com/podcast-estados-unidos-de-becerril/",
+                tipo: "Individual"
+            }            
         ],
         "LA JAGUA DE IBIRICO": [
             {

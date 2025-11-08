@@ -54,7 +54,7 @@
 
 .playlist-info h4 {
   font-family: "Georgia", serif;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin: 0 0 2px 0;
   color: #1a1a1a;
@@ -62,7 +62,7 @@
 
 .playlist-slogan {
   font-family: "Georgia", serif;
-  font-size: .9rem;
+  font-size: 1rem;
   font-style: italic;
   color: #444;
   margin-bottom: 4px;
@@ -71,7 +71,7 @@
 .playlist-desc {
   font-family: "Georgia", serif;
   text-align: justify;
-  font-size: .85rem;
+  font-size: 1.1rem;
   color: #333;
   line-height: 1.27rem;
 }
