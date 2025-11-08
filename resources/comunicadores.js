@@ -30,6 +30,17 @@
         producciones: [
           {"url":"https://colectivotejidosonoro.com/el-cafe-del-milagro-el-legado-que-resistio-al-conflicto/"}
         ]
+      },
+      {
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/La-Paz-Informa.jpeg",
+        titulo: "LA PAZ NOTICIAS",
+        slogan: "Junior Guerra",
+        info: "",
+        web: "",
+        email: "",
+        producciones: [
+          {"url":"https://colectivotejidosonoro.com/proyecto-asopraps-ganancias-para-la-vida/"}
+        ]
       }
     ],
 
@@ -46,150 +57,128 @@
         ]
       },
       {
-        logo: "img/comunicadores/becerril/logo2.png",
-        titulo: "Becerril Noticias TV",
-        slogan: "Actualidad local",
-        info: "Canal local de noticias y coberturas de eventos municipales.",
-        web: "https://becerrilnoticias.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/10/corporacion-Zona-MInera.jpeg",
+        titulo: "ZONA MINERA PERIÓDICO",
+        slogan: "Luis Eduardo Barreto Muegues",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_becerril_3"},
-          {"url":"https://vimeo.com/example_becerril_4"}
+          {"url":"https://colectivotejidosonoro.com/reportaje-a-traves-del-turismo-de-memoria-y-los-frutos-del-bosque/"}
         ]
       }
     ],
 
     "La Jagua de Ibirico": [
       {
-        logo: "img/comunicadores/lajagua/logo1.png",
-        titulo: "Radio Ibirico",
-        slogan: "Entre montañas y llanos",
-        info: "Emisora regional con microprogramas de memoria minera y desarrollo rural.",
-        web: "https://radioibirico.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/10/Ebano-en-la-red.jpeg",
+        titulo: "EBANO EN LA RED",
+        slogan: "Karen Angulo - Silvana Osorio",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_jagua_1"},
-          {"url":"https://vimeo.com/example_jagua_2"}
+          {"url":"https://colectivotejidosonoro.com/naranjable-dulzura-que-sana/"}
         ]
       },
       {
-        logo: "img/comunicadores/lajagua/logo2.png",
-        titulo: "Aula Audiovisual Ibirico",
-        slogan: "Narrativas locales",
-        info: "Colectivo de producción audiovisual y formación en comunicación comunitaria.",
-        web: "https://aulaibirico.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/10/El-kuper-Online.jpeg",
+        titulo: "EL KUPER ON LINE",
+        slogan: "Húber Pedroza",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_jagua_3"},
-          {"url":"https://vimeo.com/example_jagua_4"}
+          {"url":"https://colectivotejidosonoro.com/la-jagua-de-ibirico-historia-de-la-mineria/"}
         ]
       }
     ],
 
     "El Paso": [
       {
-        logo: "img/comunicadores/elpaso/logo1.png",
-        titulo: "Radio Río Cesar",
-        slogan: "Sonidos ribereños",
-        info: "Programas de pesca, cultura y economía local.",
-        web: "https://radioriocesar.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/La-loma-al-dia-fondo-soft-orange.png",
+        titulo: "LA LOMA AL DÍA ",
+        slogan: "Mayeisi Molina ",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_elpaso_1"},
-          {"url":"https://vimeo.com/example_elpaso_2"}
+          {"url":"https://colectivotejidosonoro.com/descubre-la-ruta-cano-blanco-bosque-seco-tropical-el-pulmon-natural-de-la-jagua-de-ibirico/"}
         ]
       },
       {
-        logo: "img/comunicadores/elpaso/logo2.png",
-        titulo: "El Paso TV",
-        slogan: "Conectando comunidad",
-        info: "Cobertura de eventos locales y reportajes sobre humedales.",
-        web: "https://elpasotv.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/10/Activa-Stereo-95.1-FM.jpeg",
+        titulo: "ACTIVA STEREO",
+        slogan: "Jhonatan Martínez Meza",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_elpaso_3"},
-          {"url":"https://vimeo.com/example_elpaso_4"}
+          {"url":"https://colectivotejidosonoro.com/la-contaminacion-en-la-loma-de-calenturas/"}
         ]
       }
     ],
 
     "Chiriguaná": [
       {
-        logo: "img/comunicadores/chiriguana/logo1.png",
-        titulo: "Chiriguaná Comunitaria",
-        slogan: "Nuestra gente, nuestra voz",
-        info: "Proyecto radial con énfasis en producción campesina y cultura local.",
-        web: "https://chiriguana.radio.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/logo-chiriguana-esterero.jpg",
+        titulo: "LA VOZ DE CHIRIGUANÁ",
+        slogan: "Loly Bustamante",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_chiri_1"},
-          {"url":"https://vimeo.com/example_chiri_2"}
+          {"url":"https://colectivotejidosonoro.com/chiriguana-tu-proximo-destino/"}
         ]
       },
       {
-        logo: "img/comunicadores/chiriguana/logo2.png",
-        titulo: "Portal Chiriguaná",
-        slogan: "Noticias y memoria",
-        info: "Agencia de noticias local y reportajes temáticos.",
-        web: "https://portalchiriguana.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/enterese-portal-noticioso.jpeg",
+        titulo: "ENTÉRESE, NOTICIAS CHIRIGUANÁ ",
+        slogan: "Luis Fernandez",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_chiri_3"},
-          {"url":"https://vimeo.com/example_chiri_4"}
+          {"url":"https://colectivotejidosonoro.com/las-panochas-de-rincon-hondo-cultura-y-tradicion/"}
         ]
       }
     ],
 
     "Chimichagua": [
       {
-        logo: "img/comunicadores/chimichagua/logo1.png",
-        titulo: "Radio Ciénaga",
-        slogan: "Ecos de Zapatosa",
-        info: "Emisora enfocada en pesca sostenible y patrimonio lacustre.",
-        web: "https://radiocienaga.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/informativo-chimichagua-y-el-caribe.jpeg",
+        titulo: "INFORMATIVO CHIMICHAGUA Y EL CARIBE",
+        slogan: "Jhon Rodriguez",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_chimi_1"},
-          {"url":"https://vimeo.com/example_chimi_2"}
+          {"url":"https://colectivotejidosonoro.com/la-zapatosa-resiste/"}
         ]
       },
       {
-        logo: "img/comunicadores/chimichagua/logo2.png",
-        titulo: "Chimichagua TV",
-        slogan: "Historias del agua",
-        info: "Productora de contenido para turismo comunitario y tradición oral.",
-        web: "https://chimichaguatv.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/CREA-CON-PALETA-DE-COLORES.png",
+        titulo: "CREA CHIMICHAGUA",
+        slogan: "Juan Fernando Jiménez Correa",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_chimi_3"},
-          {"url":"https://vimeo.com/example_chimi_4"}
+          {"url":"https://colectivotejidosonoro.com/artes-sanas-candelaria-territorio-anfibio/"}
         ]
       }
     ],
 
     "El Banco": [
       {
-        logo: "img/comunicadores/elbanco/logo1.png",
-        titulo: "Radio El Banco",
-        slogan: "Puerto y palabre",
-        info: "Emisora portuaria con programación sobre comercio fluvial y cultura.",
-        web: "https://radioelbanco.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/10/Kure.jpeg",
+        titulo: "COLECTIVO KURÉ, ESCUELA DE PRODUCCIÓN AUDIOVISUAL",
+        slogan: "Martín España",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_banco_1"},
-          {"url":"https://vimeo.com/example_banco_2"}
-        ]
-      },
-      {
-        logo: "img/comunicadores/elbanco/logo2.png",
-        titulo: "Canal Magdalena",
-        slogan: "Pulso ribereño",
-        info: "Canal digital con reportajes y podcasts sobre el río y su gente.",
-        web: "https://canalmagdalena.example.org",
-        email: "",
-        producciones: [
-          {"url":"https://youtu.be/example_banco_3"},
-          {"url":"https://vimeo.com/example_banco_4"}
+          {"url":"https://colectivotejidosonoro.com/los-suenos-de-andres-martinez/"}
         ]
       }
     ]
