@@ -9,42 +9,40 @@
   window.comunicadores = {
     "AGUSTIN CODAZZI": [
       {
-        logo: "img/comunicadores/agustin/logo1.jpg",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/10/Gazeta-Empresarial.jpeg",
         titulo: "Gazzetta Empresarial",
-        slogan: "",
+        slogan: "Jairo Lozano",
         info: "Ayudamos a líderes públicos, 🏛️ emprendedores 🚀 y empresarios 💼 a comunicar lo que hacen bien. Transformamos la gestión pública, el emprendimiento y la competitividad sostenible. 🌱",
         web: "https://www.facebook.com/GazzettaEmpresarialOficial",
         email: "gazzettaempresarial@gmail.com",
         producciones: [
-          {"url":"https://youtu.be/example_codazzi_1"},
-          {"url":"https://vimeo.com/example_codazzi_2"}
+          {"url":"https://colectivotejidosonoro.com/agrosolidaria/"},
+          {"url":"https://colectivotejidosonoro.com/rios-heridos-del-perija/"}
         ]
       },
       {
-        logo: "img/comunicadores/agustin/logo2.png",
-        titulo: "Canal Tejido Sonoro",
-        slogan: "Historias del corredor",
-        info: "Productora audiovisual local, documentales y piezas sonoras comunitarias.",
-        web: "https://tejidosonoro.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/Canal-14.jpeg",
+        titulo: "CANAL 14",
+        slogan: "Arialdo Jimenez",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_codazzi_3"},
-          {"url":"https://vimeo.com/example_codazzi_4"}
+          {"url":"https://colectivotejidosonoro.com/el-cafe-del-milagro-el-legado-que-resistio-al-conflicto/"}
         ]
       }
     ],
 
     "Becerril": [
       {
-        logo: "img/comunicadores/becerril/logo1.png",
-        titulo: "Radio Becerril",
-        slogan: "Voces de la serranía",
-        info: "Programa radial con enfoque en minería responsable y comunidad.",
-        web: "https://radiobecerril.example.org",
+        logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/LA-BOLA.jpg",
+        titulo: "LA BOLA",
+        slogan: "Franklin Cuenta",
+        info: "",
+        web: "",
         email: "",
         producciones: [
-          {"url":"https://youtu.be/example_becerril_1"},
-          {"url":"https://vimeo.com/example_becerril_2"}
+          {"url":"https://colectivotejidosonoro.com/el-eco-de-una-voz-la-herencia-cultural-de-rafael-orozco/"}
         ]
       },
       {

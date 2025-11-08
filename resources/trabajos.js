@@ -52,7 +52,7 @@
                 titulo: "Reportaje - RÍO MARACAS: agua, memoria y esperanza en Becerril (Cesar)",
                 slogan: "FRANKLIN CUENTA/LA BOLA.",
                 descripcion: "A orillas del sinuoso río Maracas, en el corazón del municipio de Becerril (Cesar), se teje una historia de identidad, transformación y lucha. No solo es fuente de agua: el río ha sido testigo de leyendas que avivan la imaginación, de jornadas duras de trabajo y de amenazas persistentes; pero hoy, con la mirada puesta en un malecón que empieza a dibujar su renacer, reaparece como símbolo vivo de un pueblo que quiere volver a abrazarlo.",
-                thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/rio-maracas.jpg",
+                thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/thumnail-estaos-unidos-becerril.jpg",
                 url: "https://colectivotejidosonoro.com/rio-maracas-agua-memoria-y-esperanza-en-becerril-cesar/",
                 tipo: "Individual"
             },
