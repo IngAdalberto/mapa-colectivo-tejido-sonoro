@@ -7,7 +7,7 @@
     window.trabajos = {
         "AGUSTIN CODAZZI": [
             {
-                titulo: "AGROSOLIDARIA",
+                titulo: "AGROSOLIDARIA CODAZZI: Hilo a hilo, restaurando vida en la Serranía del Perijá",
                 slogan: "JAIRO LOZANO /Gazzetta Empresarial",
                 descripcion: "Este reportaje de tres minutos revela cómo, a través de alianzas estratégicas con la Federación Nacional de Cafeteros, el Consorcio Alma Natura, la Agencia de Desarrollo Rural y aliados locales, Agrosolidaria impulsa procesos de restauración socioecológica, fortalecimiento productivo e innovación campesina.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/10-AGROSOLIDARIA-2-item-menu.png",
@@ -16,7 +16,7 @@
             },
             {
                 titulo: "Ríos Heridos Del Perijá Codacense",
-                slogan: "Gazzetta Empresarial",
+                slogan: "JAIRO LOZANO /Gazzetta Empresarial",
                 descripcion: "A través de testimonios de campesinos y productores la pieza retrata con sensibilidad la degradación progresiva del rio Cásacara, afectado por la deforestación, el uso intensivo de agroquímicos y la expansión agrícola. Cada escena revela un fragmento de esta crisis silenciosa que amenaza la base hídrica y ecológica de la región.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/3-RIOS-HERIDOS-DEL-PERIJA-CODACENSE-item-menu.png",
                 url: "https://colectivotejidosonoro.com/rios-heridos-del-perija/",
@@ -34,11 +34,27 @@
         "BECERRIL": [
             {
                 titulo: "Reportaje - A través del Turismo de Memoria",
-                slogan: "REPORTAJE/LUIS EDUARDO BARRETO MUEGUES/Zona Minera Periódico",
+                slogan: "LUIS EDUARDO BARRETO MUEGUES/Zona Minera Periódico",
                 descripcion: "Dentro de los municipios que integran el Corredor de la Vida se encuentra Becerril del Campo, su historia data desde los tiempos de la Colonia, cuando el capitán Bartolomé de Aníbal Paleólogo y Becerra, por orden de la Real Audiencia, fundó su comunidad con la categoría de ciudad el 8 de marzo de 1593, como reza en los archivos nacionales.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/4-VISA-USA-Y-ASOVECAB-A-item-menu.jpeg.png",
                 url: "https://colectivotejidosonoro.com/reportaje-a-traves-del-turismo-de-memoria-y-los-frutos-del-bosque/",
                 tipo: "Colectivo"
+            },
+            {
+                titulo: "Mujeres De Becerril",
+                slogan: "LUIS EDUARDO BARRETO MUEGUES/Zona Minera Periódico",
+                descripcion: "El papel de la mujer en la sociedad becerrilera marca su historia como soporte de las familias que han tejido su vida en el territorio. El audiovisual es un claro homenaje a la resiliencia y a la capacidad de trabajo de las habitantes de Becerril a lo largo de su historia.",
+                thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/9-MUJERES-DE-BECERRIL-GUARDIANAS-DE-LA-MEMORIA-item-menu.png",
+                url: "https://colectivotejidosonoro.com/mujeres-de-becerril-guardianas-de-la-memoria-y-motor-del-cambio/",
+                tipo: "Individual"
+            },
+            {
+                titulo: "Reportaje - RÍO MARACAS: agua, memoria y esperanza en Becerril (Cesar)",
+                slogan: "FRANKLIN CUENTA/LA BOLA.",
+                descripcion: "A orillas del sinuoso río Maracas, en el corazón del municipio de Becerril (Cesar), se teje una historia de identidad, transformación y lucha. No solo es fuente de agua: el río ha sido testigo de leyendas que avivan la imaginación, de jornadas duras de trabajo y de amenazas persistentes; pero hoy, con la mirada puesta en un malecón que empieza a dibujar su renacer, reaparece como símbolo vivo de un pueblo que quiere volver a abrazarlo.",
+                thumbnail: "",
+                url: "",
+                tipo: "Individual"
             },
             {
                 titulo: "El eco de una voz",
@@ -46,14 +62,6 @@
                 descripcion: "A través de la voz de un entrañable amigo de infancia, esta crónica revive los primeros pasos de Rafael Orozco, el joven soñador de Becerríl que, con su voz inconfundible, conquistó el corazón del vallenato y se convirtió en leyenda.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/5-La-herencia-cultural-de-Rafael-Orozco-item-menu.png",
                 url: "https://colectivotejidosonoro.com/el-eco-de-una-voz-la-herencia-cultural-de-rafael-orozco/",
-                tipo: "Individual"
-            },
-            {
-                titulo: "Mujeres De Becerril",
-                slogan: "LUIS EDUARDO BARRETO MUEGUES – ZONA MINERA PERIODICO",
-                descripcion: "El papel de la mujer en la sociedad becerrilera marca su historia como soporte de las familias que han tejido su vida en el territorio. El audiovisual es un claro homenaje a la resiliencia y a la capacidad de trabajo de las habitantes de Becerril a lo largo de su historia.",
-                thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/9-MUJERES-DE-BECERRIL-GUARDIANAS-DE-LA-MEMORIA-item-menu.png",
-                url: "https://colectivotejidosonoro.com/mujeres-de-becerril-guardianas-de-la-memoria-y-motor-del-cambio/",
                 tipo: "Individual"
             }
         ],
