@@ -33,7 +33,7 @@
       },
       {
         logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/La-Paz-Informa.jpeg",
-        titulo: "LA PAZ NOTICIAS",
+        titulo: "La Paz, Cesar Noticias",
         slogan: "Junior Guerra",
         info: "",
         web: "",
@@ -73,7 +73,7 @@
       {
         logo: "https://colectivotejidosonoro.com/wp-content/uploads/2025/10/Ebano-en-la-red.jpeg",
         titulo: "EBANO EN LA RED",
-        slogan: "Karen Angulo - Silvana Osorio",
+        slogan: "Karen Angulo - Silvana Osorio - Ana Mendoza",
         info: "",
         web: "",
         email: "",
