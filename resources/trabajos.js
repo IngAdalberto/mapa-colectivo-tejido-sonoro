@@ -65,7 +65,7 @@
                 tipo: "Individual"
             },
             {
-                titulo: "Estados Unidos de Becerril, Un Destino de Paz",
+                titulo: "Podcast - Estados Unidos de Becerril, Un Destino de Paz",
                 slogan: "JUNIOR GUERRA/La Paz, Cesar Noticias",
                 descripcion: "El Corregimiento de Estados Unidos en Becerril, Cesar, se ha convertido en un territorio de paz que surge de la mano de la corporación Visa Usa.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/rio-maracas.jpg",
