@@ -66,7 +66,7 @@
             },
             {
                 titulo: "Estados Unidos de Becerril, Un Destino de Paz",
-                slogan: "JUNIOR GUERRA/La Paz Noticias",
+                slogan: "JUNIOR GUERRA/La Paz, Cesar Noticias",
                 descripcion: "El Corregimiento de Estados Unidos en Becerril, Cesar, se ha convertido en un territorio de paz que surge de la mano de la corporación Visa Usa.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/rio-maracas.jpg",
                 url: "https://colectivotejidosonoro.com/podcast-estados-unidos-de-becerril/",
@@ -84,7 +84,7 @@
             },
             {
                 titulo: "Naranjable: Dulzura que sana",
-                slogan: "EBANO EN LA RED – Karen Angulo - Silvana Osorio",
+                slogan: "EBANO EN LA RED – Karen Angulo - Silvana Osorio - Ana Mendoza",
                 descripcion: "En las montañas del Cesar, donde el silencio del cierre minero dejó huellas profundas, un grupo de mujeres decidió transformar la pérdida en esperanza. Así nació Naranjable, una iniciativa que convierte las naranjas del campo jagüero en una jalea artesanal cargada de historia, sabor y resiliencia.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/2.-EL-NARANAJABLE-EBANO-EN-LA-RED.png",
                 url: "https://colectivotejidosonoro.com/naranjable-dulzura-que-sana/",
@@ -102,7 +102,7 @@
         "EL PASO": [
             {
                 titulo: "Proyecto Asopraps",
-                slogan: "ALIANZA ARIALDO JIMENEZ/ Canal 14 – JUNIOR GUERRA/La Paz Noticias",
+                slogan: "ALIANZA ARIALDO JIMENEZ/ Canal 14 – JUNIOR GUERRA/La Paz, Cesar Noticias",
                 descripcion: "La Asociación Agropecuaria Asopraps, ubicada en el corregimiento de La Loma, municipio de El Paso, Cesar, se ha consolidado como un ejemplo de organización comunitaria comprometida con el desarrollo sostenible.",
                 thumbnail: "https://colectivotejidosonoro.com/wp-content/uploads/2025/11/1-proyecto-asopraps-item-menu.png",
                 url: "https://colectivotejidosonoro.com/proyecto-asopraps-ganancias-para-la-vida/",
